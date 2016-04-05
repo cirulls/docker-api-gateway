@@ -350,7 +350,8 @@ function _M.access()
 -- CHANGE IT WITH YOUR API SERVICE ID IN 3SCALE ADMIN PORTAL
 if ngx.var.service_id == '123456789' then
   local parameters = get_auth_params("headers", string.split(ngx.var.request, " ")[1] )
-  service = service_2555417729179 --
+  -- CHANGE IT WITH YOUR API SERVICE ID IN 3SCALE ADMIN PORTAL
+  service = service_123456789 --
   ngx.var.secret_token = service.secret_token
   params.app_id = parameters["app_id"]
   params.app_key = parameters["app_key"]  -- or ""  -- Uncoment the first part if you want to allow not passing app_key
