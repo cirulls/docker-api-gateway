@@ -36,4 +36,4 @@ COPY certificates/certificate.key /usr/local/openresty/nginx/ssl/certificate.key
 
 EXPOSE 80 443 
 
-CMD ["/usr/local/openresty/nginx/sbin/nginx","-p","/usr/local/openresty/nginx/","-c","/usr/local/openresty/nginx/conf/nginx_2445581300291.conf"]
+CMD ["/usr/local/openresty/nginx/sbin/nginx","-p","/usr/local/openresty/nginx/","-c","/usr/local/openresty/nginx/conf/nginx_123456789.conf"]
