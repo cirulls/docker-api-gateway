@@ -27,9 +27,13 @@ RUN curl -sSL http://openresty.org/download/openresty-${OPENRESTY_VERSION}.tar.g
  && make install 
 
 # copy 3scale nginx configuration files
-COPY conf/nginx_2445581300291.conf /usr/local/openresty/nginx/conf/nginx_2445581300291.conf
-COPY conf/nginx_2445581300291.lua /usr/local/openresty/nginx/conf/nginx_2445581300291.lua
+COPY conf/nginx_123456789.conf /usr/local/openresty/nginx/conf/nginx_123456789.conf
+COPY conf/nginx_123456789.lua /usr/local/openresty/nginx/conf/nginx_123456789.lua
 
-EXPOSE 80 
+# copy SSH certificate
+COPY certificates/bundle.crt /usr/local/openresty/nginx/ssl/bundle.crt
+COPY certificates/certificate.key /usr/local/openresty/nginx/ssl/certificate.key
+
+EXPOSE 80 443 
 
 CMD ["/usr/local/openresty/nginx/sbin/nginx","-p","/usr/local/openresty/nginx/","-c","/usr/local/openresty/nginx/conf/nginx_2445581300291.conf"]
