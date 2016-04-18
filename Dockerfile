@@ -34,6 +34,7 @@ COPY conf/nginx_123456789.lua /usr/local/openresty/nginx/conf/nginx_123456789.lu
 COPY certificates/bundle.crt /usr/local/openresty/nginx/ssl/bundle.crt
 COPY certificates/certificate.key /usr/local/openresty/nginx/ssl/certificate.key
 
+# remove port 80 to force HTTPS on port 443
 EXPOSE 80 443 
 
 CMD ["/usr/local/openresty/nginx/sbin/nginx","-p","/usr/local/openresty/nginx/","-c","/usr/local/openresty/nginx/conf/nginx_123456789.conf"]
