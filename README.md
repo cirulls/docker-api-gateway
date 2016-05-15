@@ -39,7 +39,7 @@ You can find your API service ID by going to https://youraccount-admin.3scale.ne
 
 **LUA FILE NAME**
 
-You can find the name of the .lua file by downloading the nginx configuration files from https://youraccount-admin.3scale.net/apiconfig/services/123456789/integration/edit (replace the dummy digits in the URL with your API service ID):
+You can find the name of the .lua file by downloading the nginx configuration files from https://youraccount-admin.3scale.net/apiconfig/services/123456789/integration/edit (replace the dummy digits in the URL with your API service ID). Make sure you first selected nginx On-premises Gateway in the Integration tab. 
  
 ![alt text](https://github.com/cirulls/docker-api-gateway/blob/master/screenshots/lua_filename.png "Download lua file")
 
