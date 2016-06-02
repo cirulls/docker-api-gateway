@@ -25,7 +25,7 @@ curl -v "https://yourdomainname.com:443/path/to/api" -H'app_id: your3scaleappid'
 ### 3scale Settings
 The configuration files in [conf](https://github.com/cirulls/docker-api-gateway/tree/master/conf) require settings which are specific to 3scale. Here is where to find the values for these settings on your 3scale admin account:
 
-**3SCALE PROVIDER KEY/SECRET TOKEN**
+**3SCALE PROVIDER KEY**
 
 You can find your 3scale provider key in https://youraccount-admin.3scale.net/p/admin/account. 
 
@@ -36,6 +36,12 @@ You can find your 3scale provider key in https://youraccount-admin.3scale.net/p/
 You can find your API service ID by going to https://youraccount-admin.3scale.net/apiconfig/services and selecting the API service:
 
 ![alt text](https://github.com/cirulls/docker-api-gateway/blob/master/screenshots/api_service_id.png "API Service ID")
+
+**SECRET TOKEN**
+
+If you set up a secret token in the API's authentication settings, you can find the secret token in https://youraccount-admin.3scale.net/apiconfig/services/123456789/integration/edit (replace the dummy digits in the URL with your API service ID)
+
+![alt text](https://github.com/cirulls/docker-api-gateway/blob/master/screenshots/secret_token.png "secret_token")
 
 **LUA FILE NAME**
 
